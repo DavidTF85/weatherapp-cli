@@ -29,48 +29,49 @@ func RunAddRecord() {
 	tem:= utils.ReadConsoleFloat64()
 	fmt.Println("\n")
 
-// 	fmt.Println("Humidity (%):")
-// 	//Hu:= utils.ReadConsoleFloat64()
-// 	fmt.Println("\n")
-//
-//
-// 	fmt.Println("Pressure (Pa):")
-// //	Pr:= utils.ReadConsoleFloat64()
-// 	fmt.Println("\n")
-//
-// 	fmt.Println("CO2 (ppm):")
-// 	//co2:= utils.ReadConsoleFloat64()
-// 	fmt.Println("\n")
-//
-// 	fmt.Println("TVOC (ppb):")
-// 	//tvor:= utils.ReadConsoleFloat64()
-// 	fmt.Println("\n")
-//
-// 	// fmt.Println("Date/Time:")
-// 	// fmt.Println("\n")
-// }
-	//data structure
+	fmt.Println("Humidity (%):")
+	Hu:= utils.ReadConsoleFloat64()
+	fmt.Println("\n")
+
+
+	fmt.Println("Pressure (Pa):")
+    Pr:= utils.ReadConsoleFloat64()
+	fmt.Println("\n")
+
+	fmt.Println("CO2 (ppm):")
+	co2:= utils.ReadConsoleFloat64()
+	fmt.Println("\n")
+
+	fmt.Println("TVOC (ppb):")
+	tvoc:= utils.ReadConsoleFloat64()
+	fmt.Println("\n")
+
+	// fmt.Println("Date/Time:")
+	// fmt.Println("\n")
+
+	
+//data structure
 	newdata:= models.TimeSeriesDatum {
 		Temperature: tem,
 		Pressure:	Pr,
 		Humidity: Hu,
 		CarbonDioxide: co2,
-		TotalVolatileOrganicCompounds: tvor,
+		TotalVolatileOrganicCompounds: tvoc,
 	}
 	return newdata
 }
-
-// func ShowNewData(tsd []models.TimeSeriesDatum) {
-// 	fmt.Println("###############################")
-// 	fmt.Println("# Weather App Command Console #")
-// 	fmt.Println("###############################")
-// 	for _, v := range tsd {
-// 		fmt.Println("")
-// 		fmt.Printf("T:%f \n", v.Temperature)
-// 		fmt.Printf("H:%f \n", v.Humidity)
-// 		fmt.Printf("P:%f \n", v.Co2)
-// 		fmt.Printf("C:%f \n", v.Co2)
-// 		fmt.Printf("T:%f \n", v.Tvoc)
-// 		fmt.Println("Time:", v.Timestamp)
-// 		fmt.Println("")
-
+//ShowNewData is for create an array and storage new input data 
+func ShowNewData (neoData []models.TimeSeriesDatum) {
+	fmt.Println("###############################")
+	fmt.Println("# Weather App Command Console #")
+	fmt.Println("###############################")
+	for _, v := range neoData {
+		fmt.Println("")
+		fmt.Printf("new Temp:%f \n", v.Temperature)
+		fmt.Printf("new Humi:%f \n", v.Humidity)
+		fmt.Printf("new CO2:%f \n", v.Co2)
+		fmt.Printf("new Tvoc :%f \n", v.Tvoc)
+		fmt.Println("Time:", v.Timestamp)
+		fmt.Println("")
+	}
+}
