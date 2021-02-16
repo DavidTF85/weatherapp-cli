@@ -1,0 +1,250 @@
+Assignment 01
+Introduction
+The purpose of this application is allow the user to manually enter time-series data and perform calculations on it.
+
+Instructions
+You will be marked on the following criteria:
+
+Did you complete all the task?
+Is there any problems with the code?
+Did you follow the instructions outlined in the task?
+Please follow the instructions carefully.
+
+Tasks
+1. Setup Code repository
+Please setup a code repository in your GitHub called: weatherapp-cli, clone it to your developer machine and write all your code in there. You must submit all your code in this code repository.
+
+2. Setup Project Structure
+Please create the following project structure:
+
+📦 weatherapp-cli
+│   📄README.md
+│   📄Makefile
+│
+└───📁cmd
+|      📄main.go
+│
+└───📁internal
+    │
+    └───📁controllers
+    │      📄controller.go
+    │
+    └───📁models
+    │      📄model.go
+    │
+    └───📁utils
+           📄consolereader.go
+           📄statistics.go
+3. Utilities
+Please look at the following files, copy and paste them into your project and please implement.
+
+Start by implementing the consolereader.go file:
+
+// FILE: weatherapp-cli/internal/utils/consolereader.go
+package utils
+
+//TODO: Implement.
+
+func ReadConsoleString() string {
+    //TODO: Implement.
+}
+
+func ReadConsoleInt64() int64 {
+    //TODO: Implement.
+}
+
+func ReadConsoleFloat64() float64 {
+    //TODO: Implement.
+}
+Finally please implement the statistics.go file:
+
+// FILE: weatherapp-cli/internal/utils/statistics.go
+package utils
+
+//TODO: Implement.
+
+func CalculateAverage(numbers []float64) float64 {
+    //TODO: Implement.    
+}
+
+func CalculateSum(numbers []float64) float64 {
+    //TODO: Implement.    
+}
+
+func CalculateMinimum(numbers []float64) float64 {
+    //TODO: Implement.    
+}
+
+func CalculateMaximum(numbers []float64) float64 {
+    //TODO: Implement.    
+}
+4. Models
+The purpose of this package is to store our applications data structure.
+
+The data we want to collect are as follows:
+
+Temperature (measured in degrees)
+Pressure (measured in pascals)
+Humidity (measured in % relative humidity)
+Carbon Dioxide (Measured in parts per million (ppm))
+Total Volatile Organic Compounds (Measured in parts per billion (ppb))
+The file starts as follows, please implement:
+
+// FILE: weatherapp-cli/internal/models/models.go
+package models
+
+type TimeSeriesDatum struct {
+    //TODO: Implement your code here...    
+}
+5. Application Logic
+Please make sure the following requirements are met.
+
+A. Main Menu GUI
+Please make sure the application has the following menu GUI:
+
+###############################
+# Weather App Command Console #
+###############################
+Menu
+(A) Add a record
+(B) List all records
+(C) Calculate Summary
+(D) Exit
+
+Please enter choice:
+This menu code needs to be in the weatherapp-cli/cmd/main.go file.
+
+Please don't forget an error message when the user did not specify a choice.
+
+The functionality for "Add", "List", etc need to be called from the weatherapp-cli/internal/controllers/controller.go. THIS IS IMPORTANT.
+
+B. Add a record GUI
+When you click (A) then the GUI should look like this:
+
+###############################
+# Weather App Command Console #
+###############################
+
+Please enter the following records:
+
+Temperature (deg):
+Humidity (%):
+Pressure (Pa):
+CO2 (ppm):
+TVOC (ppb):
+Date/Time:
+
+When you finish entering all the records, you should have the following output GUI:
+
+###############################
+# Weather App Command Console #
+###############################
+
+Record created!
+
+PRESS ANY KEY TO CONTINUE
+Once user clicked any key, they are returned back to the main menu.
+
+C. List all records GUI
+When the user enters that option, the GUI should look something like this:
+
+###############################
+# Weather App Command Console #
+###############################
+
+T: x1
+H: X1
+P: X1
+C: X1
+T: X1
+Time: x1
+
+T: x2
+H: X2
+P: X2
+C: X2
+T: X2
+Time: x2
+
+T: x3
+H: X3
+P: X3
+C: X3
+T: X3
+Time: x3
+
+PRESS ANY KEY TO CONTINUE
+Please note that x1, x2, x3, etc are actual values.
+
+D. Calculate GUI
+When the user clicked the calculate option, please make the GUI look as follows:
+
+###############################
+# Weather App Command Console #
+###############################
+
+* * * * * *
+Temperature
+* * * * * *
+Min: x
+Max: x
+Count: x
+Summation: x
+Average: x
+
+* * * * *
+Pressure
+* * * * *
+Min: x
+Max: x
+Count: x
+Summation: x
+Average: x
+
+* * * * *
+Humidity
+* * * * *
+Min: x
+Max: x
+Count: x
+Summation: x
+Average: x
+
+* * * * * *
+Temperature
+* * * * * *
+Min: x
+Max: x
+Count: x
+Summation: x
+Average: x
+
+* *
+CO2
+* *
+Min: x
+Max: x
+Count: x
+Summation: x
+Average: x
+
+* * *
+TVOC
+* * *
+Min: x
+Max: x
+Count: x
+Summation: x
+Average: x
+
+PRESS ANY KEY TO CONTINUE
+E. Exit GUI
+When the user exits the application, the following GUI:
+
+###############################
+# Weather App Command Console #
+###############################
+
+Have nice day!
+
+PRESS ANY KEY TO CONTINUE
