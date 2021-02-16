@@ -65,18 +65,18 @@ newdata:= models.TimeSeriesDatum {
 }
 
 // //ShowNewData is for create an array and storage new input data 
-// func ShowNewData(neoData []models.TimeSeriesDatum) {
-// 	fmt.Println("###############################")
-// 	fmt.Println("# Weather App Command Console #")
-// 	fmt.Println("###############################")
-// 	for _, v := range neoData {
-// 		fmt.Println("")
-// 		fmt.Printf("new Temp:%f \n", v.Temperature)
-// 		fmt.Printf("new Pre:%f \n", v.Pressure)
-// 		fmt.Printf("new Humi:%f \n", v.Humidity)
-// 		fmt.Printf("new CO2:%f \n", v.CarbonDioxide)
-// 		fmt.Printf("new Tvoc :%f \n", v.TotalVolatileOrganicCompounds)
-// 		fmt.Println("")
-// 	}
-// 	fmt.Println("this  is all F)(*&Yuo9-")
-// } 
+func ShowNewData(neodata []models.TimeSeriesDatum) {
+	fmt.Println("###############################")
+	fmt.Println("# Weather App Command Console #")
+	fmt.Println("###############################")
+	for _, v := range neodata {
+		fmt.Println("")
+		fmt.Printf("new Temp:%f \n", v.Temperature)
+		fmt.Printf("new Pre:%f \n", v.Pressure)
+		fmt.Printf("new Humi:%f \n", v.Humidity)
+		fmt.Printf("new CO2:%f \n", v.CarbonDioxide)
+		fmt.Printf("new Tvoc :%f \n", v.TotalVolatileOrganicCompounds)
+		fmt.Println("")
+	}
+	fmt.Println("this  is all F)(*&Yuo9-")
+} 
