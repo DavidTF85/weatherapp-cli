@@ -47,7 +47,7 @@ func main() {
 			return
 
 		default:
-			fmt.Println("Hey !!!! FU*&% idot I had sayid choose A,B,C or D.\n")
+			fmt.Println("Hey !!!! FU*&% idot choose base on the menue.\n")
 			fmt.Printf("so read the fu*&@ng intructions and do it again dumass!\n")
 		}
 	}

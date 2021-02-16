@@ -14,6 +14,7 @@ import (
 //func RunAddRecord() models.TimeSeriesDatum {
 
 func RunAddRecord() {
+    
 	//gui for add recods
 	fmt.Println("Ok! lets add some recods")
 	time.Sleep(2 * time.Second)
@@ -51,27 +52,31 @@ func RunAddRecord() {
 
 	
 //data structure
-	newdata:= models.TimeSeriesDatum {
+	
+newdata:= models.TimeSeriesDatum {
 		Temperature: tem,
 		Pressure:	Pr,
 		Humidity: Hu,
 		CarbonDioxide: co2,
 		TotalVolatileOrganicCompounds: tvoc,
 	}
-	return newdata
+	fmt.Println(newdata)
+// 	//return newdata
 }
-//ShowNewData is for create an array and storage new input data 
-func ShowNewData (neoData []models.TimeSeriesDatum) {
-	fmt.Println("###############################")
-	fmt.Println("# Weather App Command Console #")
-	fmt.Println("###############################")
-	for _, v := range neoData {
-		fmt.Println("")
-		fmt.Printf("new Temp:%f \n", v.Temperature)
-		fmt.Printf("new Humi:%f \n", v.Humidity)
-		fmt.Printf("new CO2:%f \n", v.Co2)
-		fmt.Printf("new Tvoc :%f \n", v.Tvoc)
-		fmt.Println("Time:", v.Timestamp)
-		fmt.Println("")
-	}
-}
+
+// //ShowNewData is for create an array and storage new input data 
+// func ShowNewData(neoData []models.TimeSeriesDatum) {
+// 	fmt.Println("###############################")
+// 	fmt.Println("# Weather App Command Console #")
+// 	fmt.Println("###############################")
+// 	for _, v := range neoData {
+// 		fmt.Println("")
+// 		fmt.Printf("new Temp:%f \n", v.Temperature)
+// 		fmt.Printf("new Pre:%f \n", v.Pressure)
+// 		fmt.Printf("new Humi:%f \n", v.Humidity)
+// 		fmt.Printf("new CO2:%f \n", v.CarbonDioxide)
+// 		fmt.Printf("new Tvoc :%f \n", v.TotalVolatileOrganicCompounds)
+// 		fmt.Println("")
+// 	}
+// 	fmt.Println("this  is all F)(*&Yuo9-")
+// } 
