@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 	"weatherapp-cli/internal/models"
-	//"weatherapp-cli/internal/utils"
+	"weatherapp-cli/internal/utils"
 )
 // The functionality for "Add", "List", etc need to be called
 //from the weatherapp-cli/internal/controllers/controller.go.
@@ -26,7 +26,7 @@ func RunAddRecord() {
 
 
 	fmt.Println("Temperature (deg):")
-	//tem:= utils.ReadConsoleFloat64()
+	tem:= utils.ReadConsoleFloat64()
 	fmt.Println("\n")
 
 // 	fmt.Println("Humidity (%):")
@@ -49,16 +49,16 @@ func RunAddRecord() {
 // 	// fmt.Println("Date/Time:")
 // 	// fmt.Println("\n")
 // }
-// 	//data structure
-// 	newdata:= TimeSeriesDatum {
-// 		Temperature: tem,
-// 		Pressure:	Pr,
-// 		Humidity: Hu,
-// 		CarbonDioxide: co2,
-// 		TotalVolatileOrganicCompounds: tvor,
-// 	}
-// 	return newdata
-// }
+	//data structure
+	newdata:= models.TimeSeriesDatum {
+		Temperature: tem,
+		Pressure:	Pr,
+		Humidity: Hu,
+		CarbonDioxide: co2,
+		TotalVolatileOrganicCompounds: tvor,
+	}
+	return newdata
+}
 
 // func ShowNewData(tsd []models.TimeSeriesDatum) {
 // 	fmt.Println("###############################")
@@ -73,4 +73,4 @@ func RunAddRecord() {
 // 		fmt.Printf("T:%f \n", v.Tvoc)
 // 		fmt.Println("Time:", v.Timestamp)
 // 		fmt.Println("")
-}
+
