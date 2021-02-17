@@ -78,5 +78,6 @@ func ShowNewData(neodata []models.TimeSeriesDatum) {
 		fmt.Printf("new Tvoc :%f \n", v.TotalVolatileOrganicCompounds)
 		fmt.Println("")
 	}
-	fmt.Println("this  is all F)(*&Yuo9-")
-} 
+	return newvalues
+	fmt.Println(newvalues)
+}
